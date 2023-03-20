@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+ <!-- mapper의 패키지위치를 말한다. -->
+ <mapper namespace="com.ex.lesson02.dao.UsedGoodsMapper">
+ 	
+	<!-- mapper의 쿼리문 수행 메소드명을 id속성의 값으로 넣어준다. resultType으로 model의 객체를 속성 값으로 넣어준다.(하나의 행이 어디에 담기는가에 대한 값이 resultType값임!) -->
+ 	<select id="selectUsedGoodsList" resultType="com.ex.lesson02.model.UsedGoods">
+ 		SELECT
+ 			* 
+ 		FROM
+ 			`used_goods`
+ 	</select>
+ </mapper>
