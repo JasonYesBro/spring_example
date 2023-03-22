@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="true">
-
     <!-- Appenders -->
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <Pattern>%d %5p [%c] %m%n</Pattern>
+            <Pattern>%d{HH:mm:ss.SSS} %highlight([%-5level]) [%thread] %cyan([%logger{36}]) - %m%n</Pattern>
         </encoder>
     </appender>
 
