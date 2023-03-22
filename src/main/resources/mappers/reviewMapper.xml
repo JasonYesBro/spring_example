@@ -20,4 +20,52 @@
 			`id` = #{id}
 		
  	</select>
+ 	
+	<!-- 파라미터로 받는 값의 형이 객체타입 -->
+ 	<insert id="insertReview" parameterType="com.ex.lesson03.model.Review">
+ 		INSERT INTO `new_review`
+ 			(
+ 			`storeId`
+ 			,`menu`
+			,`userName`
+			,`point`
+			,`review`
+			,`createdAt`
+			,`updatedAt`
+ 			)
+		VALUES
+			(
+			#{storeId}
+	        , #{menu}
+	        , #{userName}
+	        , #{point}
+	        , #{review}
+	        , NOW()
+	        , NOW()
+			)
+ 	</insert>
+ 	
+ 	<!-- @Param 어노테이션으로 인해 parameterType이 당연하게도 map -->
+ 	<insert id="insertReviewAsField" parameterType="map">
+ 		INSERT INTO `new_review`
+ 			(
+ 			`storeId`
+ 			,`menu`
+			,`userName`
+			,`point`
+			,`review`
+			,`createdAt`
+			,`updatedAt`
+ 			)
+		VALUES
+			(
+			#{storeId}
+	        , #{menu}
+	        , #{userName}
+	        , #{point}
+	        , #{review}
+	        , NOW()
+	        , NOW()
+			)
+ 	</insert>
  </mapper>
