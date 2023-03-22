@@ -3,28 +3,28 @@ package com.ex.lesson03.model;
 import java.util.Date;
 
 public class Review {
-	private String id;
-	private String storeId;
+	private int id;
+	private int storeId;
 	private String menu;
 	private String userName;
-	private int point;
+	private double point;
 	private String review;
 	private Date createdAt;
 	private Date updatedAt;
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
-	public String getStoreId() {
+	public int getStoreId() {
 		return storeId;
 	}
 
-	public void setStoreId(String storeId) {
+	public void setStoreId(int storeId) {
 		this.storeId = storeId;
 	}
 
@@ -44,11 +44,11 @@ public class Review {
 		this.userName = userName;
 	}
 
-	public int getPoint() {
+	public double getPoint() {
 		return point;
 	}
 
-	public void setPoint(int point) {
+	public void setPoint(double point) {
 		this.point = point;
 	}
 
