@@ -32,4 +32,20 @@ public class ReviewBO {
 		
 		return reviewMapper.insertReviewAsField(storeId111, menu111, userName111, point111, review111);
 	}
+
+	// 메서드명 mapper쪽과 같음
+	public int updateReviewById(int id, String review) {
+		
+		return reviewMapper.updateReviewById(id, review);
+	}
+
+	
+	/**
+	 * @param id
+	 * 삭제하는 쿼리문일 경우 반환타입이 void임
+	 */
+	public void deleteReviewById(int id) {
+		
+		reviewMapper.deleteReviewById(id);
+	}
 }

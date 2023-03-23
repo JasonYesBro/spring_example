@@ -20,5 +20,13 @@ public interface ReviewMapper {
 			@Param("menu") String menu, 
 			@Param("userName") String userName, 
 			@Param("point") Double point,
-			@Param("review") String review); 
+			@Param("review") String review);
+
+	public int updateReviewById(
+			@Param("id") int id,
+			@Param("review") String review);
+
+	// 한개일 경우 @Param 필요없음
+	public void deleteReviewById(int id); 
+	
 }
