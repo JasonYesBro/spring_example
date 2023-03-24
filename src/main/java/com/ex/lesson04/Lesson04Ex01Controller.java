@@ -2,12 +2,15 @@ package com.ex.lesson04;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.ex.lesson04.bo.UserBO;
+import com.ex.lesson04.model.User;
 
 /**
  * @author jasonmilian
@@ -43,5 +46,32 @@ public class Lesson04Ex01Controller {
 		// 결과 jsp view  먼저 requestParam 이 잘 들어오고 결과화면으로 잘 가는지 확인을 한다.
 		return "lesson04/afterAddUser";
 	}
+	
+	//http://localhost/lesson04/ex01/get_latest_user_view
+	@GetMapping("/get_latest_user_view")
+	public String getLatestUserView(
+			Model model) {
+		
+		// 가장 최근에 가입된 사람 한명 select DB
+		// model 객체(바구니)에 담아둔다.
+		User user = userBO.getLastestUser();
+		model.addAttribute("user", user); // user 객체를 어떤 key에 담을지 정의
+		model.addAttribute("title", "회원 정보");
+		
+		return "lesson04/getLatestUser";
+	}
+	
+//	@GetMapping("/get_latest_user_view")
+//	public String getLatestUserView(
+//			Model model) {
+//		
+//		// 가장 최근에 가입된 사람 한명 select DB
+//		// model 객체(바구니)에 담아둔다.
+//		User user = userBO.getLastestUser();
+//		model.addAttribute("user", user); // user 객체를 어떤 key에 담을지 정의
+//		model.addAttribute("title", "회원 정보");
+//		
+//		return "lesson04/getLatestUser";
+//	}
 	
 }
