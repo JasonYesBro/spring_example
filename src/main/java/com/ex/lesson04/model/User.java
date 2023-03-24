@@ -3,13 +3,13 @@ package com.ex.lesson04.model;
 import java.util.Date;
 
 public class User {
-	int id;
-	String name;
-	String yyyymmdd;
-	String email;
-	String introduce;
-	Date createdAt;
-	Date updatedAt;
+	private int id;
+	private String name;
+	private String yyyymmdd;
+	private String email;
+	private String introduce;
+	private Date createdAt;
+	private Date updatedAt;
 
 	public int getId() {
 		return id;

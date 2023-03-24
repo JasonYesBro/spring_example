@@ -11,8 +11,8 @@ public class UserBO {
 	@Autowired
 	private UserMapper userMapper;
 	
-	public int addUserAsField(String name, String yyyymmdd, String email ,String introduce) {
+	public void addUser(String name, String yyyymmdd, String email ,String introduce) {
 		
-		return userMapper.insertUserAsField(name, yyyymmdd, email, introduce);
+		userMapper.insertUser(name, yyyymmdd, email, introduce);
 	}
 }

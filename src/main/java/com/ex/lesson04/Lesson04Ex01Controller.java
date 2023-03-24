@@ -38,9 +38,9 @@ public class Lesson04Ex01Controller {
 		
 		// insert DB
 		// 필드 Insert 방식으로 구현
-		userBO.addUserAsField(name, yyyymmdd, email, introduce);
+		userBO.addUser(name, yyyymmdd, email, introduce);
 		
-		// 결과 jsp view  먼저 requestParam 이 잘 들어오고 결과화면으로 잘 가는지 확인을 한다.	
+		// 결과 jsp view  먼저 requestParam 이 잘 들어오고 결과화면으로 잘 가는지 확인을 한다.
 		return "lesson04/afterAddUser";
 	}
 	
