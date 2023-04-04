@@ -16,4 +16,7 @@ public interface UserMapper {
 			);
 	
 	public User selectLatestUser();
+
+	// 0: 중복이 아님 1: 중복임(갯수가 존재하는 것)
+	public boolean existUserByName(String name);
 }
